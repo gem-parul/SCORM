@@ -5,13 +5,20 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ScormServiceService {
-  private baseUrl = 'http://localhost:8080/api/scorm';
+  private baseUrl = 'http://localhost:8080/api/scorm'; 
   constructor(private http: HttpClient) { }
   uploadScormPackage(formData: FormData) {
-    return this.http.post(`${this.baseUrl}/upload`, formData);
+    return this.http.post(`${this.baseUrl}/upload`, formData, { responseType: 'text' });
   }
 
   getScormCourses() {
     return this.http.get(`${this.baseUrl}/courses`);
   }
+  // uploadScormPackage(formData: FormData) {
+  //   return this.http.post(`${this.baseUrl}/upload`, formData);
+  // }
+
+  // getScormCourses() {
+  //   return this.http.get(`${this.baseUrl}/courses`);
+  // }
 }

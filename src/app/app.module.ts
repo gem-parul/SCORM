@@ -6,17 +6,26 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScormUploadComponent } from './components/scorm-upload/scorm-upload/scorm-upload.component';
 import { CourseListComponent } from './components/course-list/course-list/course-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
+import { ScormPlayerComponent } from './components/scorm-player/scorm-player.component';
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScormUploadComponent,
-    CourseListComponent
+    CourseListComponent,
+    ScormPlayerComponent,
+    SafeUrlPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatButtonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

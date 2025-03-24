@@ -1,0 +1,4 @@
+<p>scorm-player works!</p>
+<div *ngIf="courseUrl">
+    <iframe [src]="courseUrl | safeUrl" width="100%" height="600px" frameborder="0"></iframe>
+</div>
