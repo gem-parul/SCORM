@@ -9,13 +9,15 @@ import { CourseListComponent } from './components/course-list/course-list/course
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
+import { UserProgressComponent } from './components/user-progress/user-progress.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScormUploadComponent,
     CourseListComponent,
-    SafeUrlPipe
+    SafeUrlPipe,
+    UserProgressComponent
   ],
   imports: [
     BrowserModule,

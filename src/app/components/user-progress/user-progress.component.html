@@ -1,0 +1,37 @@
+<!-- <div class="container">
+  <div class="progress-wrapper" *ngIf="!loading && !error">
+    <h2>User Course Progress</h2>
+    <table class="progress-table">
+      <thead>
+        <tr>
+          <th>Course Title</th>
+          <th>Progress</th>
+          <th>Score</th>
+          <th>Total Time</th>
+          <th>Last Accessed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let progress of progressData">
+          <td>{{ progress.courseTitle }}</td>
+          <td>{{ progress.progress }}</td>
+          <td>{{ progress.score || "N/A" }}</td>
+          <td>{{ progress.totalTime || "N/A" }}</td>
+          <td>{{ progress.lastAccessed | date : "short" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="loading" class="loading">Loading progress...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+</div> -->
+
+<div>Main</div>
+<iframe
+  [src]="launchUrl | safeUrl"
+  width="100%"
+  height="600px"
+  (load)="initializeScormTracking()"
+></iframe>
+<script src="../../../assets/scorm.js"></script>

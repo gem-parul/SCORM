@@ -1,0 +1,62 @@
+.container{
+background-color: #f5f5f5;
+}
+.progress-wrapper {
+    margin-top: 0px !important;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .progress-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .progress-table th,
+  .progress-table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .progress-table th {
+    background-color: #f4f6f8;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .progress-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .progress-table tbody tr:hover {
+    background-color: #eef6ff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .loading,
+  .error {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .loading {
+    color: #007bff;
+  }
+  
+  .error {
+    color: #dc3545;
+  }
+  
