@@ -1,20 +1,25 @@
-<div style="padding: 20px;">
-  <h2>Upload SCORM ZIP Package</h2>
-  
-  <input type="file" (change)="onFileChange($event)" />
-  <button mat-raised-button color="primary" (click)="uploadFile()">Upload</button>
+<div class="container">
+  <h1>SCORM Course</h1>
+  <div class="upload-section">
+    <h2>Upload SCORM ZIP Package</h2>
+    
+    <div class="file-upload">
+      <input type="file" (change)="onFileChange($event)" class="file-input"/>
+      <button mat-raised-button color="primary" (click)="uploadFile()" class="upload-button">Upload</button>
+    </div>
 
-  <p style="margin-top: 10px; color: green;" *ngIf="message">{{ message }}</p>
+    <p class="message" *ngIf="message">{{ message }}</p>
 
-  <h3>Available Courses</h3>
-  <ul>
-    <li *ngFor="let course of courses">
-      <button mat-button color="accent" (click)="launchCourse(course)">{{ course.title }}</button>
-    </li>
-  </ul>
+    <h3>Available Courses</h3>
+    <ul class="course-list">
+      <li *ngFor="let course of courses">
+        <button mat-button color="accent" (click)="launchCourse(course)" class="course-button">{{ course.title }}</button>
+      </li>
+    </ul>
 
-  <div *ngIf="selectedCourseUrl" style="margin-top: 20px;">
-    <h3>SCORM Course</h3>
-    <iframe [src]="selectedCourseUrl" width="100%" height="600px"></iframe>
+    <div *ngIf="selectedCourseUrl" class="course-viewer">
+      <h3>SCORM Course</h3>
+      <iframe [src]="selectedCourseUrl" width="100%" height="600px" class="course-iframe"></iframe>
+    </div>
   </div>
 </div>
