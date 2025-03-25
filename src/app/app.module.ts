@@ -8,7 +8,6 @@ import { ScormUploadComponent } from './components/scorm-upload/scorm-upload/sco
 import { CourseListComponent } from './components/course-list/course-list/course-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
-import { ScormPlayerComponent } from './components/scorm-player/scorm-player.component';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { SafeUrlPipe } from './pipes/safe-url.pipe';
     AppComponent,
     ScormUploadComponent,
     CourseListComponent,
-    ScormPlayerComponent,
     SafeUrlPipe
   ],
   imports: [

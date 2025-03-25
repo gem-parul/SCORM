@@ -1,23 +1,20 @@
 <div style="padding: 20px;">
-    <h2>Upload SCORM ZIP Package</h2>
+  <h2>Upload SCORM ZIP Package</h2>
   
-    <input type="file" (change)="onFileChange($event)" />
-    <button mat-raised-button color="primary" (click)="uploadFile()">Upload</button>
-  
-    <p style="margin-top: 10px; color: green;" *ngIf="message">{{ message }}</p>
+  <input type="file" (change)="onFileChange($event)" />
+  <button mat-raised-button color="primary" (click)="uploadFile()">Upload</button>
+
+  <p style="margin-top: 10px; color: green;" *ngIf="message">{{ message }}</p>
+
+  <h3>Available Courses</h3>
+  <ul>
+    <li *ngFor="let course of courses">
+      <button mat-button color="accent" (click)="launchCourse(course)">{{ course.title }}</button>
+    </li>
+  </ul>
+
+  <div *ngIf="selectedCourseUrl" style="margin-top: 20px;">
+    <h3>SCORM Course</h3>
+    <iframe [src]="selectedCourseUrl" width="100%" height="600px"></iframe>
   </div>
-
-
-
-  <div>part 2</div>
-  <hr>
-
-<h3>Available Courses:</h3>
-<ul>
-  <li *ngFor="let course of courses">
-    {{ course.courseName }}
-    <button (click)="launchCourse(course)">Launch</button>
-  </li>
-</ul>
-
-<app-scorm-player [courseUrl]="selectedCourseUrl"></app-scorm-player>
+</div>
